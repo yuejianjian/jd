@@ -38,7 +38,6 @@
 }
 .lun-center ul{
     width:6320px;
-    position:absolute;
     top:0;
     left:0;
 }
@@ -187,13 +186,23 @@
 
 }
 
-#bigtu ,#bigtu2 ,#bigtu3 ,#bigtu4 {
+#bigtu  ,#bigtu3 ,#bigtu4 {
     height: 150px;
     width: 220px;
     padding-top: 220px;
     border:1px solid #ccc;
     overflow: hidden;
     background: url(../images/daojishi/yf-1.jpg) no-repeat;
+    float:left;
+    margin-right:25px;
+}
+#bigtu2{
+    height: 150px;
+    width: 220px;
+    padding-top: 220px;
+    border:1px solid #ccc;
+    overflow: hidden;
+    background: url(../images/daojishi/xz-1.jpg) no-repeat;
     float:left;
     margin-right:25px;
 }
@@ -233,30 +242,3 @@
     margin-top:5px;
 }
 
-
-/*.tab-h ul{
-    width:324px;
-    height:35px;
-    border:1px solid #ddd;
-}
-.tab-h li{
-    float:left;
-    height:33px;
-    width:80px;
-    border-left:1px solid #ddd;
-    text-align:center;
-    line-height:33px;
-    cursor: pointer;
-}
-.tab-h li:hover{
-    background-color:#C81623;
-    color:#FFF;
-}
-.tab-q{
-    width:1002px;
-    border:1px solid #ddd;
-    height:475px;
-}
-.tab-q .main{
-    float:left;
-}*/

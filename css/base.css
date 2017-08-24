@@ -48,10 +48,19 @@ s,i,em{font-style:normal;text-decoration:none;}
 .hide {
     display:none
 }
+/*返回顶部小火箭*/
+.top{
+    position: fixed;
+    right:50px;
+    bottom:50px;
+
+}
 /*京东首页头部*/
+
 .index{
     background:#f6f6f6;
     width:100%;
+
 }
 .top-banner {
     width:100%;
@@ -331,12 +340,8 @@ s,i,em{font-style:normal;text-decoration:none;}
 .footer{
     width:100%;
     height:500px;
-
 }
-.footer .service{
-    width:100%;
 
-}
 .slogen{
     width:100%;
     height:100px;
@@ -344,11 +349,11 @@ s,i,em{font-style:normal;text-decoration:none;}
     margin-botton:25px;
 }
 .slogen .item{
-    width:25%;
+   width:300px;
    line-height:100px;
    float:left;
-    height:42px;
-    text-align:center;
+   height:42px;
+   text-align:center;
 }
 .shopping dl{
     width:200px;

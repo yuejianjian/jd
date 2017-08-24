@@ -1,72 +1,56 @@
 /**
  * Created by jian on 2017/7/28.
  */
-/*
-function animate(obj,target){
-    clearInterval(obj.timer);  // 先清除定时器
-    var speed = obj.offsetLeft < target ? 15 : -15;  // 用来判断 应该 +  还是 -
-    obj.timer = setInterval(function() {
-        var result = target - obj.offsetLeft; // 因为他们的差值不会超过5
-        obj.style.left = obj.offsetLeft + speed + "px";
-        if(Math.abs(result)<=15)  // 如果差值不小于 5 说明到位置了
+/*顶部小火箭*/
+
+$(function() {
+    function $(id) {return document.getElementById(id);}
+    function show(obj) { obj.style.display = "block";}
+    function hide(obj) { obj.style.display = "none";}
+    function scroll() {
+        if(window.pageYOffset != null)  //  ie9+ 和其他浏览器
         {
-            clearInterval(obj.timer);
-            obj.style.left = target + "px";  // 有5像素差距   我们直接跳转目标位置
-        }
-    },10)
-}
-window.onload = function(){
-    var box = document.getElementById("box");
-    var ul = document.getElementById("ul");
-    var ullis = ul.children;
-    ul.appendChild(ul.children[0].cloneNode(true));
-    var ol = document.createElement("ol");
-    box.appendChild(ol);
-    for(var i = 0 ; i< ullis.length-1;i++){
-        var li = document.createElement("li");
-        li.innerHTML = i + 1;
-        ol.appendChild(li);
-    }
-    ol.children[0].className ="libg";
-    var ollis = ol.children;
-    for(var i = 0; i<ollis.length;i++){
-        ollis.index = i;
-        ollis[i].onmouseover = function(){
-            for(var j = 0 ; j < ollis.length;j++){
-                ollis[j].className = "";
+            return {
+                left: window.pageXOffset,
+                top: window.pageYOffset
             }
-            this.className = "libg";
-            animate(ul,-this.index*790)
-            square = key = this.index;
+        }
+        else if(document.compatMode == "CSS1Compat")  // 声明的了 DTD
+        // 检测是不是怪异模式的浏览器 -- 就是没有 声明<!DOCTYPE html>
+        {
+            return {
+                left: document.documentElement.scrollLeft,
+                top: document.documentElement.scrollTop
+            }
+        }
+        return { //  剩下的肯定是怪异模式的
+            left: document.body.scrollLeft,
+            top: document.body.scrollTop
         }
     }
-    var timer = null;
-    var key = 0;
-    var square = 0;
-    timer = setInterval(autoplay,1000);
-    function autoplay(){
-        key++;
-        if(key > ullis.length-1){
-            ul.style.left = 0;
-            key = 1;
-        }
-        animate(ul,-key*790)
-        square++;
-        if(square > ollis.length - 1){
-            aquare = 0;
-        }
-        for(var i = 0; i< ollis.length; i++){
-            ollis[i].className = "";
-        }
-        ollis[square].className = "libg";
+    //console.log(111);
+    var goTop = $("gotop");
+    window.onscroll = function() {
+        scroll().top > 0 ? show(goTop) : hide(goTop);  // 如果大于0 就显示 否则隐藏
+        leader = scroll().top;  // 把 卷去的头部 给  起始位置
+        //console.log(scroll().top);
+
     }
-    box.onmouseover = function(){
-        clearInterval(timer);
+    var leader = 0,target = 0,timer = null;
+    // leader 起始位置  target  目标位置
+    goTop.onclick = function() {
+        target = 0;  //  点击完毕之后 奔向0 去的  不写也可以
+        timer = setInterval(function() {
+            leader = leader + (target - leader ) / 10;
+            window.scrollTo(0,leader);  // 去往页面中的某个位置
+            if(leader == target)
+            {
+                clearInterval(timer);
+            }
+        },20);
     }
-    box.onmouseout = function(){
-        timer = setInterval(autoplay ,1000);
-    }
-}*/
+})
+
 /*轮播图*/
 $(function () {
     // 根据ol下li的索引号，匹配ul下相对应li的索引号
@@ -108,12 +92,13 @@ window.onload = function() {
 
     function fn(liid, bg) {  // 封装函数  参数的传递
         var obj = document.getElementById(liid);
-        obj.onmouseover = function () {
+        obj.onmouseover = function() {
            bigtu.style.backgroundImage = bg;
            bigtu2.style.backgroundImage = bg;
            bigtu3.style.backgroundImage = bg;
            bigtu4.style.backgroundImage = bg;
            bigtu5.style.backgroundImage = bg;
+
         }
     }
 
@@ -123,11 +108,12 @@ window.onload = function() {
     fn("li04", "url(images/daojishi/yf-4.jpg)");
     fn("li05", "url(images/daojishi/yf-5.jpg)");
     /*2*/
-    fn("2li01", "url(images/daojishi/yf-1.jpg)"); // 实参  调用函数
-    fn("2li02", "url(images/daojishi/yf-2.jpg)");
-    fn("2li03", "url(images/daojishi/yf-3.jpg)");
-    fn("2li04", "url(images/daojishi/yf-4.jpg)");
-    fn("2li05", "url(images/daojishi/yf-5.jpg)");
+    fn("2li01", "url(images/daojishi/xz-1.jpg)"); // 实参  调用函数
+    fn("2li02", "url(images/daojishi/xz-2.jpg)");
+    fn("2li03", "url(images/daojishi/xz-3.jpg)");
+    fn("2li04", "url(images/daojishi/xz-4.jpg)");
+    fn("2li05", "url(images/daojishi/xz-5.jpg)");
+
     /*3*/
 
     fn("3li01", "url(images/daojishi/yf-1.jpg)"); // 实参  调用函数
@@ -148,6 +134,9 @@ window.onload = function() {
     fn("5li04", "url(images/daojishi/yf-4.jpg)");
     fn("5li05", "url(images/daojishi/yf-5.jpg)");
 }
+
+
+
 /*倒计时*/
 $(function(){
     var demo = document.getElementById("demo");
