@@ -50,6 +50,32 @@ $(function() {
         },20);
     }
 })
+/*搜索栏点击 字体消失*/
+$(function(){
+
+    var txt = document.getElementById("txt");
+    txt.onfocus = function(){ //得到焦点
+        //alert("得到了焦点");
+        //什么时候该清空呢
+        //用户没有输入的时候，用户第一次使用的时候
+        // 如果 这里input 里面的文字 是 请输入...  说明用户没有用过，就应该清空
+        if(txt.value == "数码相机"  )
+        {
+            txt.value = "";
+            txt.style.color = "#333";
+        }
+    }
+    txt.onblur = function(){ //失去焦点
+        //alert("失去了焦点");
+        //什么时候再还原呢？
+        //input的值是 空的时候，我们再复原
+        if(txt.value == "")
+        {
+            txt.value = "数码相机";
+            txt.style.color = "#ccc";
+        }
+    }
+})
 
 /*轮播图*/
 $(function () {
@@ -58,6 +84,16 @@ $(function () {
         $(this).addClass("libg").siblings().removeClass("libg");
         $(".lun-center ul li").eq($(this).index()).fadeIn("fast").siblings().fadeOut();
     });
+    var timer=null; //定时器返回值，主要用于关闭定时器
+    var iNow=0; //iNow为正在展示的图片索引值，当用户打开网页时首先显示第一张图，即索引值为0
+    timer=setInterval(function(){ //打开定时器
+        iNow++;    //让图片的索引值次序加1，这样就可以实现顺序轮播图片
+        if(iNow> 8){ //当到达最后一张图的时候，让iNow赋值为第一张图的索引值，轮播效果跳转到第一张图重新开始
+            iNow=0;
+        }
+        $(".lun-center ol li").eq(iNow).trigger("mouseenter"); //模拟触发数字按钮的click
+    },2000); //
+
 });
 /*tab栏切换*/
 $(function(){
@@ -90,18 +126,16 @@ window.onload = function() {
     var bigtu4 = document.getElementById("bigtu4");
     var bigtu5 = document.getElementById("bigtu5");
 
-    function fn(liid, bg) {  // 封装函数  参数的传递
-        var obj = document.getElementById(liid);
+    function fn(id, bg) {  // 封装函数  参数的传递
+        var obj = document.getElementById(id);
         obj.onmouseover = function() {
-           bigtu.style.backgroundImage = bg;
-           bigtu2.style.backgroundImage = bg;
-           bigtu3.style.backgroundImage = bg;
-           bigtu4.style.backgroundImage = bg;
-           bigtu5.style.backgroundImage = bg;
-
+                bigtu.style.backgroundImage = bg;
+                bigtu2.style.backgroundImage = bg;
+                bigtu3.style.backgroundImage = bg;
+                bigtu4.style.backgroundImage = bg;
+                bigtu5.style.backgroundImage = bg;
         }
     }
-
     fn("li01", "url(images/daojishi/yf-1.jpg)"); // 实参  调用函数
     fn("li02", "url(images/daojishi/yf-2.jpg)");
     fn("li03", "url(images/daojishi/yf-3.jpg)");
