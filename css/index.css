@@ -6,7 +6,8 @@
 /*左侧*/
 .lun-left{
     width:190px;
-    height:480px;
+    height:450px;
+    padding: 15px 0;
     background-color:#666;
     z-index:-1;
     float:left;
@@ -125,6 +126,9 @@
 .tab li:hover a{
     color:#FFF;
 }
+.tab p{
+    text-align: left;
+}
 .products{
     width: 210px;
     border:1px solid #ddd;
@@ -153,24 +157,56 @@
     width:210px;
     height:180px;
     border:1px solid #ddd;
-    box-sizing:border-box;
+    box-sizing: border-box;
+    overflow: hidden;
 
 }
-.incos li{
-    position: relative;
-    overflow: hidden;
+.incos a{
     float: left;
     width: 51px;
-    height: 60px;
+    height: 25px;
+    padding-top: 35px;
+    background:url(../images/base/icon.png) no-repeat;
     border-top: 1px solid #e7e7e7;
     border-left: 1px solid #e7e7e7;
     text-align: center;
-    line-height:60px;
 }
-.incos .hua-1{
-    background:url(../images/base/sprite_fs@1x.png) no-repeat 0 -88px;
 
-
+.incos a.incos01{
+    background-position: 14px -100px;
+}
+.incos a.incos02{
+    background-position: 14px -46px;
+}
+.incos a.incos03{
+    background-position: -30px -100px;
+}
+.incos a.incos04{
+    background-position: -75px 8px;
+}
+.incos a.incos05{
+    background-position: -74px -46px;
+}
+.incos a.incos06{
+    background-position: 14px 10px;
+}
+.incos a.incos07{
+    background-position: -30px -46px;
+}
+.incos a.incos08{
+    background-position: -75px -100px;
+}
+.incos a.incos09{
+    background-position: -118px 10px;
+}
+.incos a.incos10{
+    background-position: -118px -46px;
+}
+.incos a.incos11{
+    background-position: -118px -100px;
+}
+.incos a.incos12{
+    background-position: -30px 10px;
 }
 
 /*正中下*/
@@ -179,7 +215,7 @@
 
 }
 .sport{
-    margin:350px 5px 0 10px;
+    margin:350px 10px 0;
 }
 .fruit{
     margin-top:350px;
@@ -213,44 +249,35 @@
     overflow: hidden;
 
 }
-#bigtu  ,#bigtu3 ,#bigtu4 {
+.bigtu{
+    float:left;
     height: 170px;
     width: 220px;
+    margin-right:25px;
     padding-top: 220px;
     border:1px solid #ccc;
     overflow: hidden;
+}
+#bigtu  ,#bigtu3 ,#bigtu4 {
+
     background: url(../images/daojishi/yf-1.jpg) no-repeat;
-    float:left;
-    margin-right:25px;
 }
 #bigtu2{
-    height: 170px;
-    width: 220px;
-    padding-top: 220px;
-    border:1px solid #ccc;
-    overflow: hidden;
     background: url(../images/daojishi/xz-1.jpg) no-repeat;
-    float:left;
-    margin-right:25px;
 }
 #bigtu5{
-    height: 170px;
-    width: 220px;
-    padding-top: 220px;
-    border:1px solid #ccc;
-    overflow: hidden;
     background: url(../images/daojishi/yf-1.jpg) no-repeat;
-    float:right;
+    margin-right: 0;
 }
-#bigtu ul ,#bigtu2 ul ,#bigtu3 ul ,#bigtu4 ul ,#bigtu5 ul{
+.bigtu ul{
     overflow: hidden;
     border-top:1px solid #ccc;
 }
-#bigtu li ,#bigtu2 li ,#bigtu3 li ,#bigtu4 li ,#bigtu5 li {
+.bigtu li{
     float: left;
     width:25px;
     height:25px;
-    margin: 0 5px;
+    margin: 5px 0 0 5px;
     border: 1px solid #ddd;
 }
  .price , .name{

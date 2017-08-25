@@ -8,7 +8,7 @@ textarea { resize:none; } /*防止拖动*/
 img {border:0; vertical-align:middle; }  /*  去掉图片低测默认的3像素空白缝隙*/
 table { border-collapse:collapse; }
 body {
-    font:12px/150% Arial,Verdana,"\5b8b\4f53";
+    font:12px/150% Arial,'microsoft yahei';
     color:#666;
     background:#fff
 }
@@ -108,13 +108,21 @@ s,i,em{font-style:normal;text-decoration:none;}
 .fl:hover .dd{
     display:block;
 }
-.fl .dd .active{background-color:#C81623;}
 .fl .dd .item{
     float:left;
     width:60px;
     margin:10px auto;
     padding:2px auto;
     text-align:center;
+}
+.fl .dd .active{
+    background-color:#C81623;
+}
+.fl .dd .active a{
+    color: #fff;
+}
+.fl .dd .item a:hover{
+    color: #C81623;
 }
 .fr li{
     float:left;
