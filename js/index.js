@@ -1,4 +1,6 @@
-
+/**
+ * Created by jian on 2017/8/22.
+ */
 /*顶部小火箭 原生js写法*/
 /*window.onload = function(){
     function $(id) {return document.getElementById(id);}
