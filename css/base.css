@@ -290,6 +290,9 @@ s,i,em{font-style:normal;text-decoration:none;}
     margin-right:4px;
     color:#999;
 }
+.hotword a:hover{
+    color:#C81623;
+}
  /*导航栏*/
 .nav{
     width:100%;
