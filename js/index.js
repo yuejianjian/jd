@@ -95,7 +95,7 @@ $(function() {
     }
     for(var j = 1 ; j < 6 ; j++){
         fn("li0" + j,1 , "url(images/daojishi/yf-"+j+".jpg)"); // 实参  调用函数
-        fn("2li0" + j,2 , "url(images/daojishi/yf-"+j+".jpg)");
+        fn("2li0" + j,2 , "url(images/daojishi/xz-"+j+".jpg)");
         fn("3li0" + j,3 , "url(images/daojishi/yf-"+j+".jpg)");
         fn("4li0" + j,4 , "url(images/daojishi/yf-"+j+".jpg)");
         fn("5li0" + j,5 , "url(images/daojishi/yf-"+j+".jpg)");
