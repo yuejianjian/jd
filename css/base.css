@@ -345,7 +345,9 @@ s,i,em{font-style:normal;text-decoration:none;}
     background-color: #eaeaea;
     margin-top:30px;
 }
-
+.footer .w{
+    background-color: #eaeaea;
+}
 .slogen{
     width:100%;
     height:100px;
@@ -385,6 +387,7 @@ s,i,em{font-style:normal;text-decoration:none;}
 
     height:200px;
 }
+
 .links{
     height:50px;
     text-align:center;
