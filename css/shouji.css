@@ -1,0 +1,316 @@
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img { margin:0; padding:0; }
+fieldset, img,input,button { border:none; padding:0;margin:0;outline-style:none; }
+ul, ol { list-style:none; }
+input { padding-top:0; padding-bottom:0; font-family: "Microsoft YaHei","宋体";}
+select, input { vertical-align:middle; }
+select, input, textarea { font-size:12px; margin:0; }
+textarea { resize:none; } /*防止拖动*/
+img {border:0; vertical-align:middle; }  /*  去掉图片低测默认的3像素空白缝隙*/
+table { border-collapse:collapse; }
+body {
+    font:12px/150% Arial,'microsoft yahei';
+    color:#666;
+    background:#fff
+}
+.clearfix:before,.clearfix:after{
+    content:"";
+    display:table;
+}
+.clearfix:after{clear:both;}
+.clearfix{
+    *zoom:1;/*IE/7/6*/
+}
+a{color:#666; text-decoration:none; }
+a:hover{color:#C81623;}
+h1,h2,h3,h4,h5,h6{text-decoration:none;font-weight:normal;font-size:100%;}
+s,i,em{font-style:normal;text-decoration:none;}
+.col-red{color: #C81623!important;}
+
+/*公共类*/
+.w {  /*版心 提取 */
+    width: 1210px;margin:0 auto;
+}
+.fl {
+    float:left
+}
+.fr {
+    float:right
+}
+.al {
+    text-align:left
+}
+.ac {
+    text-align:center
+}
+.ar {
+    text-align:right
+}
+.hide {
+    display:none
+}
+/*ddddddd*/
+.lunbo{
+    width:100%;
+    height:auto;
+    text-align:center;
+}
+.lunbo img{
+    width:100%;
+    height:auto;
+}
+.search{
+    width:540px;
+    height:35px;
+    float:left;
+    margin:10px auto;
+    text-align: center;
+}
+.search input{
+    width:450px;
+    height:32px;
+    border:2px solid #B61D1D;
+    padding-left:4px;
+    float:left;
+    font:14px/32px "Microsoft YaHei";
+    color:#999;
+}
+.search button{
+    height:36px;
+    float:left;
+    font:16px/36px "Microsoft YaHei";
+    cursor: pointer;
+    color:#000000;
+}
+@media screen and (max-width:480px){
+    .section1{
+        position:relative;
+    }
+    .lunbo img{
+        width:100%;
+        height:168px;
+
+    }
+    .search{
+        position:absolute;
+        top:0;
+        margin:20px auto;
+        left:50%;
+        width:355px;
+        height:35px;
+        transform: translate(-50%, -50%);
+
+
+    }
+  .search input{
+        position: relative;
+        background: white;
+        border:1px solid #000000;
+        -moz-border-radius: 15px;
+        -webkit-border-radius: 15px;
+        border-radius: 15px;
+        width:310px;
+        height: 29px;
+        margin-top: 6px;
+        overflow: hidden;
+        }
+    .search button{
+        font-size: 13px;
+        float:left;
+        margin-left:10px;
+    }
+    .w{
+        width:380px;
+    }
+    /*222*/
+    .section2{
+        width:100%;
+        height:150px;
+    }
+    .nav a{
+        width:75px;
+        height:75px;
+        float:left;
+        text-align: center;
+
+    }
+    .nav a img{
+        width:38px;
+        height:38px;
+        margin:5px auto;
+
+    }
+    .nav a span{
+        display: block;
+        text-align: center;
+        font-size: 14px;
+
+    }
+    /*333*/
+    .section3{
+        width:100%;
+        height:135px;
+        background-color:#FFF;
+    }
+    .section3 .libao img{
+        width:100%;
+        height:105px;
+    }
+    .section3 .news{
+        height:30px;
+        line-height:30px;
+        border:1px solid #9d9d9d;
+        border-radius: 15px;
+        background-color:#FFF;
+    }
+    .news img{
+        width:80px;
+        height:20px;
+        float:left;
+        margin:5px auto;
+
+    }
+    .newlis{
+        float:left;
+        color:red;
+        font-size:14px;
+        margin-left:50px;
+        height:20px;
+
+    }
+    .a-right{
+        float:right;
+        font-size:14px;
+        color:red;
+    }
+
+    /*4444*/
+    .section4{
+        width:100%;
+        height:180px;
+
+    }
+    .section4 .daojishi{
+        width:100%;
+        height:35px;
+        background-color:pink;
+    }
+    #demo p{
+        font-size: 16px;
+        text-align: center;
+        margin:5px auto;
+        line-height:35px;
+    }
+    .section4 .zhangshi {
+        height:145px;
+    }
+    .zhangshi li{
+        width:90px;
+        height:145px;
+        float:left;
+        margin-top:5px;
+        margin-right:5px;
+    }
+
+    .zhangshi .price-right{
+        width:90px;
+        height:145px;
+        float:right;
+    }
+    .zhangshi li img{
+        width:90px;
+        height:90px;
+    }
+    .zhangshi li span{
+        display: block;
+        font-size:14px;
+        text-align:center;
+    }
+   .price .new-price{
+       color:#f23030;
+   }
+    .price .old-price{
+        color:#686868;
+        text-decoration: line-through;
+    }
+
+    /*5555*/
+    .section5{
+        width:100%;
+        height:auto;
+        overflow: hidden;
+    }
+    .section .alis{
+        margin-bottom:100px;
+
+    }
+    .section5 .ashuo{
+        width:100%;
+        height:50px;
+        background:url(../images/shouji/ashuo.png)no-repeat center;
+    }
+    .section5 .ashuo span img{
+        display: block;
+        width:80px;
+        height:40px;
+        margin:5px auto;
+    }
+
+    .real-left .text-left ,.real-right .text-right
+
+    {
+        width:100px;
+        height:100px;
+        float:left;
+    }
+    .text-left strong ,.text-right strong{
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .text-left p ,.text-right p{
+        height: 20px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .text-left span ,.text-right span{
+        font-size:12px;
+        background-color:#ff4a7d;
+    }
+    .real-left .img-left img ,.real-right .img-right img{
+        width:80px;
+        height:100px;
+        float:left;
+    }
+    .section5 .real-left {
+        width:180px;
+
+        float: left;
+    }
+    .section5 .real-right{
+        width:180px;
+        float:right;
+    }
+    /*6666*/
+
+    .sectionx{
+        width:100%;
+        height:70px;
+        background-color:#FFF;
+
+
+
+
+    }
+    .sectionx .dilist li{
+        width:20%;
+        height:70px;
+        float:left;
+        text-align:center;
+
+    }
+    .sectionx .dilist li img{
+        width:76px;
+        height:70px;
+
+    }
+
+}
